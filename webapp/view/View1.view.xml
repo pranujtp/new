@@ -88,12 +88,12 @@
                                 text="{i18n>btnAddDetails}"
                                 icon="sap-icon://add-contact"
                                 press="Onadd" />
-                            <Button
+                            <!-- <Button
                                 id="btn2"
                                 type="Reject"
                                 text="{i18n>btnDelete}"
                                 icon="sap-icon://delete"
-                                press="onDelete" />
+                                press="onDelete" /> -->
                             <Button
                                 id="btn3"
                                 type="Emphasized"
