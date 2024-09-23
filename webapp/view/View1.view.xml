@@ -1,0 +1,164 @@
+<mvc:View
+   controllerName="demoapp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns:svm="sap.ui.comp.smartvariants"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:semantic="sap.m.semantic">
+
+    <Page>
+        <f:ShellBar
+            id="idShellBar"
+            title="{i18n>pagetitle}"
+            homeIcon="https://thumbs.dreamstime.com/z/boy-student-icon-194483666.jpg"
+            showCopilot="true"
+            showSearch="true"
+            showNotifications="true"
+            showProductSwitcher="true"
+            notificationsNumber="2">
+            <f:profile>
+                <Avatar initials="{i18n>Avatar}" />
+            </f:profile>
+        </f:ShellBar>
+        <f:DynamicPage headerExpanded="{/headerExpanded}">
+            <f:title />
+            <f:header>
+                <f:DynamicPageHeader>
+                    <f:content>
+                        <fb:FilterBar
+                            id="filterbar"
+                            persistencyKey="myPersKey"
+                            useToolbar="false"
+                            showGoOnFB="false">
+                            <fb:filterGroupItems>
+                                <fb:FilterGroupItem
+                                    name="MAIL"
+                                    label="{i18n>Mail}"
+                                    groupName="Group3"
+                                    visibleInFilterBar="true">
+                                    <fb:control>
+                                        <Input
+                                            id="box3"
+                                            value="{oModel>Mail}"
+                                            fieldGroupIds="editableFields"
+                                            valueHelpOnly="true"
+                                            valueHelpRequest="onValueHelpmail"
+                                            showValueHelp="true" />
+                                    </fb:control>
+                                </fb:FilterGroupItem>
+                                <fb:FilterGroupItem
+                                    name="daterange"
+                                    label="{i18n>date}"
+                                    groupName="Group1"
+                                    visibleInFilterBar="true">
+                                    <fb:control>
+                                        <DateRangeSelection
+                                            id="clickdate"
+                                            change="onDate"
+                                            width="100%"
+                                            valueState="{valueState}"
+                                            valueStateText="{valueStateText}" />
+                                    </fb:control>
+                                </fb:FilterGroupItem>
+                            </fb:filterGroupItems>
+                        </fb:FilterBar>
+                    </f:content>
+                </f:DynamicPageHeader>
+            </f:header>
+            <f:content>
+                <Table
+                    items="{path :'datamodel>/employees'}"
+                    id="tab1"
+                    selectionChange="onItemSelect"
+                    mode="SingleSelectLeft"
+                    growing="true"
+                    growingThreshold="5">
+                    <headerToolbar>
+                        <Toolbar id="id1">
+                            <ToolbarSpacer />
+                            <Button
+                                id="btn1"
+                                type="Ghost"
+                                text="{i18n>btnAddDetails}"
+                                icon="sap-icon://add-contact"
+                                press="Onadd" />
+                            <Button
+                                id="btn2"
+                                type="Reject"
+                                text="{i18n>btnDelete}"
+                                icon="sap-icon://delete"
+                                press="onDelete" />
+                            <!-- <Button
+                                id="btn3"
+                                type="Emphasized"
+                                icon="sap-icon://user-edit"
+                                text="{i18n>btnedit}"
+                                press="onedit" /> -->
+                            <Button
+                                id="btn4"
+                                type="Emphasized"
+                                text="{i18n>btndownlaod}"
+                                icon="sap-icon://download-from-cloud"
+                                press="ondownload" />
+                            <u:FileUploader
+                                id="FileUploaderId"
+                                sameFilenameAllowed="true"
+                                iconOnly="false"
+                                buttonOnly="true"
+                                fileType="XLSX,xlsx"
+                                icon="sap-icon://upload"
+                                iconFirst="true"
+                                style="Emphasized"
+                                change="onUpload" />
+                        </Toolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column id="clm1">
+                            <Text text="ID" />
+                        </Column>
+                        <Column id="clm2">
+                            <Text text="{i18n>firstname}" />
+                        </Column>
+                        <Column id="clm3">
+                            <Text text="{i18n>Lastname}" />
+                        </Column>
+                        <Column id="clm4">
+                            <Text text="{i18n>phonenumber}" />
+                        </Column>
+                        <Column id="clm5">
+                            <Text text="{i18n>role}" />
+                        </Column>
+                        <Column id="clm6">
+                            <Text text="{i18n>Joindate}" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{datamodel>id}" />
+                                <Text text="{datamodel>firstname}" />
+                                <Text text="{datamodel>Lastname}" />
+                                <Text text="{datamodel>phonenumber}" />
+                                <Text text="{datamodel>role}" />
+                                <Text text="{datamodel>Joindate}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </f:content>
+            <f:footer>
+                <OverflowToolbar>
+                    <ToolbarSpacer />
+                    <Button text="Accept" type="Accept" />
+                    <Button text="Reject" type="Reject" />
+                </OverflowToolbar>
+            </f:footer>
+        </f:DynamicPage>
+    </Page>
+</mvc:View>

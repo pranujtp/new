@@ -1,0 +1,28 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "firstname": "John",
+            "Lastname": "Doe",
+            "phonenumber": "9876543892",
+            "role": "Developer",
+            "Joindate": "2020-01-15"
+        },
+        {
+            "id": 2,
+            "firstname": "Jane",
+            "Lastname": "Smith",
+            "phonenumber": "6987345270",
+            "role": "Manager",
+            "Joindate": "2019-11-30"
+        },
+        {
+            "id": 3,
+            "firstname": "Samuel",
+            "Lastname": "Green",
+            "phonenumber":"7094746556",
+            "role": "Analyst",
+            "Joindate": "2021-06-25"
+        }
+    ]
+}
