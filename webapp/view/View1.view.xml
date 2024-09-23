@@ -94,12 +94,12 @@
                                 text="{i18n>btnDelete}"
                                 icon="sap-icon://delete"
                                 press="onDelete" />
-                            <!-- <Button
+                            <Button
                                 id="btn3"
                                 type="Emphasized"
                                 icon="sap-icon://user-edit"
                                 text="{i18n>btnedit}"
-                                press="onedit" /> -->
+                                press="onedit" />
                             <Button
                                 id="btn4"
                                 type="Emphasized"
