@@ -105,7 +105,7 @@
                                 type="Emphasized"
                                 text="{i18n>btndownlaod}"
                                 icon="sap-icon://download-from-cloud"
-                                press="ondownload" /> -->
+                                press="ondownload" />
                             <u:FileUploader
                                 id="FileUploaderId"
                                 sameFilenameAllowed="true"
@@ -115,7 +115,7 @@
                                 icon="sap-icon://upload"
                                 iconFirst="true"
                                 style="Emphasized"
-                                change="onUpload" />
+                                change="onUpload" /> -->
                         </Toolbar>
                     </headerToolbar>
                     <columns>
