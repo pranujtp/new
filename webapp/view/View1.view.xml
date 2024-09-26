@@ -82,7 +82,7 @@
                     <headerToolbar>
                         <Toolbar id="id1">
                             <ToolbarSpacer />
-                            <!-- <Button
+                            <Button
                                 id="btn1"
                                 type="Ghost"
                                 text="{i18n>btnAddDetails}"
@@ -115,7 +115,7 @@
                                 icon="sap-icon://upload"
                                 iconFirst="true"
                                 style="Emphasized"
-                                change="onUpload" /> -->
+                                change="onUpload" />
                         </Toolbar>
                     </headerToolbar>
                     <columns>
