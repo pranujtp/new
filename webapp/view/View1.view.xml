@@ -82,18 +82,18 @@
                     <headerToolbar>
                         <Toolbar id="id1">
                             <ToolbarSpacer />
-                            <Button
+                            <!-- <Button
                                 id="btn1"
                                 type="Ghost"
                                 text="{i18n>btnAddDetails}"
                                 icon="sap-icon://add-contact"
                                 press="Onadd" />
-                            <!-- <Button
+                            <Button
                                 id="btn2"
                                 type="Reject"
                                 text="{i18n>btnDelete}"
                                 icon="sap-icon://delete"
-                                press="onDelete" /> -->
+                                press="onDelete" />
                             <Button
                                 id="btn3"
                                 type="Emphasized"
@@ -105,7 +105,7 @@
                                 type="Emphasized"
                                 text="{i18n>btndownlaod}"
                                 icon="sap-icon://download-from-cloud"
-                                press="ondownload" />
+                                press="ondownload" /> -->
                             <u:FileUploader
                                 id="FileUploaderId"
                                 sameFilenameAllowed="true"
