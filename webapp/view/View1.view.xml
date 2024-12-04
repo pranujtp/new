@@ -82,12 +82,12 @@
                     <headerToolbar>
                         <Toolbar id="id1">
                             <ToolbarSpacer />
-                            <Button
+                            <!-- <Button
                                 id="btn1"
                                 type="Ghost"
                                 text="{i18n>btnAddDetails}"
                                 icon="sap-icon://add-contact"
-                                press="Onadd" />
+                                press="Onadd" /> -->
                             <Button
                                 id="btn2"
                                 type="Reject"
